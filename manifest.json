@@ -1,0 +1,15 @@
+{
+    "name":"支語大警察",
+    "description":"對 你懂的",
+    "version":"0.1",
+    "manifest_version":2,
+    "background":[
+        {
+            "matches":[
+                "<all_urls>"
+            ],
+            "js":  ["police.js"]
+        }
+    ],
+    "permissions":["activeTab"]
+}
