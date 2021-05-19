@@ -1,4 +1,4 @@
-console.log('hello, world');
-chrome.tabs.onUpdated.addListener(() => {
+
+chrome.runtime.onInstalled.addListener(() => {
   console.log('hello, world');
 });

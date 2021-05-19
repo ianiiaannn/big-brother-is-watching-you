@@ -5,10 +5,8 @@
     "manifest_version":2,
     "background":[
         {
-            "matches":[
-                "<all_urls>"
-            ],
-            "js":  ["police.js"]
+            "scripts":  ["police.js"],
+            "persistent":false
         }
     ],
     "permissions":["activeTab"]
