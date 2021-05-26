@@ -3,10 +3,10 @@
     "description":"對 你懂的",
     "version":"0.1",
     "manifest_version":2,
-    "background":[
+    "content_scripts":[
         {
-            "scripts":  ["police.js"],
-            "persistent":false
+            "matches": ["*://*/*"],
+            "js": ["test.js"]
         }
     ],
     "browser_action":{
