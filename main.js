@@ -1,1 +1,3 @@
-console.log('警察開機')
+let pureHtml = document.documentElement.innerHTML;
+pureHtml.split('</head>').pop();
+console.log(pureHtml);
