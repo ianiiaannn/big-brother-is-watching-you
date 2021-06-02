@@ -1,14 +1,27 @@
-let pureHtml = document.body.innerHTML;
+// find every chi-words and help them get their true color
 let count = 0;
 const treeWalker = document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
+
   while (treeWalker.nextNode()) {
     // walk every text tag
     const node = treeWalker.currentNode;
     console.log('loop')
     // i don't know why but the line below work... a half
-    node.textContent = node.textContent.replace(new RegExp('text', 'g'), '<span style="color:red !important">'+'text'+'</span>');
-    
+    let Cs = node.innerHTML.replace(new RegExp('text', 'g'), '<span style="color:red !important">'+'text'+'</span>');  
+    node.innerHTML=Cs;
+
+
+
+    //node.textContent = node.textContent.replace(new RegExp('text', 'g'), '<span style="color:red !important">${text}</span>');
+    //var Cs=node;
+    //for(let i=0;i<=Cs.length;i++){
+    //  let text= Cs.textContent;
+    //  Cs.innerHTML=text.replace(new RegExp('text', 'g'), '<span style="color:red !important">'+text+'</span>');
+    //}
+    //if(node.textContent ==)  node.style.backgroundColor = 'red';
 }
+
+
 let shepopo = [
     "https://image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fcw1.tw%2FCW%2Fcrossing%2Fimages%2Farticle%2F201802%2Farticle-5a9368e289128.jpg/?w=828&format=webp",
     "https://imgcdn.cna.com.tw/www/webphotos/WebOg/600/20200128/598x314_858749950586.jpg",
@@ -24,9 +37,3 @@ for (let i = 0; i < all_img.length; i++) {
     all_img[i].src = shepopo[random_number];
     // last_one = i;
 }
-
-
-
-let pureHtml = document.documentElement.innerHTML;
-pureHtml.split('</head>').pop();
-console.log(pureHtml);
