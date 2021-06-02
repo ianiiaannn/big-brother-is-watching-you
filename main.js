@@ -2,10 +2,12 @@ let pureHtml = document.body.innerHTML;
 let count = 0;
 const treeWalker = document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
   while (treeWalker.nextNode()) {
+    // walk every text tag
     const node = treeWalker.currentNode;
-    if (node.currentNode=="SCRIPT")console.log('hi')
     console.log('loop')
+    // i don't know why but the line below work... a half
     node.textContent = node.textContent.replace(new RegExp('text', 'g'), '<span style="color:red !important">'+'text'+'</span>');
+    
 }
 let shepopo = [
     "https://image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fcw1.tw%2FCW%2Fcrossing%2Fimages%2Farticle%2F201802%2Farticle-5a9368e289128.jpg/?w=828&format=webp",
