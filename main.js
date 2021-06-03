@@ -10,20 +10,11 @@ txtFile.onreadystatechange=()=>{
       lines=txtFile.responseText.split("\n");
       const treeWalker = document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT); // to run on every node
         while (treeWalker.nextNode()) {
+          let node = treeWalker.currentNode;
+          let tmpString = node.textContent
           for(let i=0;i<=lines.length-1;i++){
-            let node = treeWalker.currentNode;
-            let tmpString = node.textContent
             let word=lines[i];
             word=word.replace(/\r?\n|\r/gi,word); // remove /r at the end
-            tmpString = tmpString.replace(new RegExp(word,'g'), '<span style="color:red !important" class="winnie">'+word+'</span>'); //add css 
-            tmpString = tmpString.replace(new RegExp('新冠肺炎','g'), '<span style="color:red !important" class="winnie">'+'中共武漢肺炎'+'</span>');
-            tmpString = tmpString.replace(new RegExp('COVID-19','gi'), '<span style="color:red !important" class="winnie">'+'China virus'+'</span>');
-            tmpString = tmpString.replace(new RegExp('嚴重特殊傳染性肺炎','gi'), '<span style="color:red !important" class="winnie">'+'中共武漢肺炎'+'</span>');
-            tmpString = tmpString.replace(new RegExp('SARS-CoV-2','gi'), '<span style="color:red !important" class="winnie">'+'China virus'+'</span>');
-            tmpString = tmpString.replace(new RegExp('Report of the WHO-China Joint Mission on Coronavirus Disease 2019','gi'), '<span style="color:red !important" class="winnie">'+'辣個中國好棒棒報告'+'</span>');
-            tmpString = tmpString.replace(new RegExp('WHO','g'), '<span style="color:red !important" class="winnie">'+'中華民國淪陷區衛生組織'+'</span>');
-            tmpString = tmpString.replace(new RegExp('印度變種病毒','gi'), '<span style="color:red !important" class="winnie">'+'看起來是印度來的但是實際上還是中共武漢肺炎'+'</span>');
-            tmpString = tmpString.replace(new RegExp('世界衛生組織','gi'), '<span style="color:red !important" class="winnie">'+'中華民國淪陷區衛生組織'+'</span>');
             if(tmpString!=node.textContent&&tmpString!='<span style="color:red !important" class="winnie"></span>'){
               count++;
               console.log(tmpString)
@@ -31,7 +22,20 @@ txtFile.onreadystatechange=()=>{
               node.textContent='';
             }
           }
-          
+          tmpString = tmpString.replace(new RegExp('新冠肺炎','g'), '<span style="color:red !important" class="winnie">'+'中共武漢肺炎'+'</span>');
+          tmpString = tmpString.replace(new RegExp('COVID-19','gi'), '<span style="color:red !important" class="winnie">'+'China virus'+'</span>');
+          tmpString = tmpString.replace(new RegExp('嚴重特殊傳染性肺炎','gi'), '<span style="color:red !important" class="winnie">'+'中共武漢肺炎'+'</span>');
+          tmpString = tmpString.replace(new RegExp('SARS-CoV-2','gi'), '<span style="color:red !important" class="winnie">'+'China virus'+'</span>');
+          tmpString = tmpString.replace(new RegExp('Report of the WHO-China Joint Mission on Coronavirus Disease 2019','gi'), '<span style="color:red !important" class="winnie">'+'辣個中國好棒棒報告'+'</span>');
+          tmpString = tmpString.replace(new RegExp('WHO','g'), '<span style="color:red !important" class="winnie">'+'中華民國淪陷區衛生組織'+'</span>');
+          tmpString = tmpString.replace(new RegExp('印度變種病毒','gi'), '<span style="color:red !important" class="winnie">'+'看起來是印度來的但是實際上還是中共武漢肺炎'+'</span>');
+          tmpString = tmpString.replace(new RegExp('世界衛生組織','gi'), '<span style="color:red !important" class="winnie">'+'中華民國淪陷區衛生組織'+'</span>');
+          if(tmpString!=node.textContent&&tmpString!='<span style="color:red !important" class="winnie"></span>'){
+            count++;
+            console.log(tmpString)
+            node.parentNode.insertAdjacentHTML("afterbegin",tmpString);
+            node.textContent='';
+          }
       }
       
     }
