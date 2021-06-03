@@ -1,6 +1,6 @@
 // find every chi-words and help them get their true color
 let count = 0; // how mush words and been edited
-let txtURL=chrome.extension.getURL("data/chi-lanage.txt"); // url to list file
+let txtURL=chrome.extension.getURL("data/chi-list.txt"); // url to list file
 let lines; //array to store list
 let txtFile=new XMLHttpRequest(); //idk
 txtFile.open("GET",txtURL) 
