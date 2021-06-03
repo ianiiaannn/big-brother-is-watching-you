@@ -5,74 +5,16 @@ const treeWalker = document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT)
   while (treeWalker.nextNode()) {
     // walk every text tag
     const node = treeWalker.currentNode;
-    // i don't know why but the line below work... a half
-    
-    
     let tmpString = document.createElement('span');
     tmpString = node.textContent;
-    tmpString = tmpString.replace(new RegExp("text", "g"), '<span style="color:red !important" class="winnie">'+'text'+'</span>');
+    tmpString = tmpString.replace("text", '<span style="color:red !important" class="winnie">'+'text'+'</span>');
+    //new RegExp("統合", "g")
     if(tmpString!=node.textContent){
       console.log(tmpString);
       node.parentNode.insertAdjacentHTML("afterbegin",tmpString);
-      
-      //node.parentNode.removeChild(node.previousSibling)
-
-      //let parent = node.parentNode;
-      //let tmpNode = document.createTextNode(tmpString);
-      //parent.appendChild(tmpNode);
-      //parent.replaceChild(tmpNode,node);
-      //parent.removeChild(node);
-      
+      node.textContent='';
     }
-    
-    
-    
-    //node.parentNode.appendChild(tmpString);
-    //console.log(node);
-    //if(node.firstChild.hasChildNodes==null)console.log('a')
-
-    //node.nodeValue = node.nodeValue.replace(new RegExp('text', 'g'), '<span style="color:red !important">'+'text'+'</span>');  
-    
-
-
-    //node.textContent = node.textContent.replace(new RegExp('text', 'g'), '<span style="color:red !important">${text}</span>');
-    //var Cs=node;
-    //for(let i=0;i<=Cs.length;i++){
-    //  let text= Cs.textContent;
-    //  Cs.innerHTML=text.replace(new RegExp('text', 'g'), '<span style="color:red !important">'+text+'</span>');
-    //}
-    //if(node.textContent ==)  node.style.backgroundColor = 'red';
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
