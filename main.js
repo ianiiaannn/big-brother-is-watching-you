@@ -1,23 +1,24 @@
 // find every chi-words and help them get their true color
-let count = 0;
-let txtURL=chrome.extension.getURL("data/chi-lanage.txt")
-let lines;
-let txtFile=new XMLHttpRequest();
-txtFile.open("GET",txtURL)
+let count = 0; // how mush words and been edited
+let txtURL=chrome.extension.getURL("data/chi-lanage.txt"); // url to list file
+let lines; //array to store list
+let txtFile=new XMLHttpRequest(); //idk
+txtFile.open("GET",txtURL) 
 txtFile.onreadystatechange=()=>{
-  if(txtFile.readyState==4)
-    if(txtFile.status==200){
+  if(txtFile.readyState==4) 
+    if(txtFile.status==200){ // http 200
       lines=txtFile.responseText.split("\n");
-      const treeWalker = document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
+      const treeWalker = document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT); // to run on every node
         while (treeWalker.nextNode()) {
           for(let i=0;i<=lines.length-1;i++){
             let node = treeWalker.currentNode;
             let tmpString = node.textContent
             let word=lines[i];
-            word=word.replace(/\r?\n|\r/g,word);
-            tmpString = tmpString.replace(word, '<span style="color:red !important" class="winnie">'+word+'</span>');
-            if(tmpString!=node.textContent){
+            word=word.replace(/\r?\n|\r/gi,word); // remove /r at the end
+            tmpString = tmpString.replace(new RegExp(word,'g'), '<span style="color:red !important" class="winnie">'+word+'</span>'); //add css 
+            if(tmpString!=node.textContent&&tmpString!='<span style="color:red !important" class="winnie"></span>'){
               count++;
+              console.log(tmpString)
               node.parentNode.insertAdjacentHTML("afterbegin",tmpString);
               node.textContent='';
             }
