@@ -6,7 +6,8 @@
     "content_scripts":[
         {
             "matches": ["*://*/*"],
-            "js": ["main.js"]
+            "js": ["main.js"],
+            "all_frames":true
         }
     ],
     "browser_action":{
@@ -14,5 +15,8 @@
         "default_popup":"popup.html",
         "default_tilte":"支語大警察"
     },
-    "permissions":["activeTab"]
+    "permissions":["activeTab"],
+    "web_accessible_resources":[
+        "data/*.*"
+    ]
 }

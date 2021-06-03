@@ -1,20 +1,32 @@
 // find every chi-words and help them get their true color
 let count = 0;
-const treeWalker = document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
-
-  while (treeWalker.nextNode()) {
-    // walk every text tag
-    const node = treeWalker.currentNode;
-    let tmpString = document.createElement('span');
-    tmpString = node.textContent;
-    tmpString = tmpString.replace("text", '<span style="color:red !important" class="winnie">'+'text'+'</span>');
-    //new RegExp("統合", "g")
-    if(tmpString!=node.textContent){
-      console.log(tmpString);
-      node.parentNode.insertAdjacentHTML("afterbegin",tmpString);
-      node.textContent='';
+let txtURL=chrome.extension.getURL("data/chi-lanage.txt")
+let lines;
+let txtFile=new XMLHttpRequest();
+txtFile.open("GET",txtURL)
+txtFile.onreadystatechange=()=>{
+  if(txtFile.readyState==4)
+    if(txtFile.status==200){
+      lines=txtFile.responseText.split("\n");
+      console.log(lines[0])
+      const treeWalker = document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
+        while (treeWalker.nextNode()) {
+          for(let i=0;i<=lines.length-1;i++){
+            let node = treeWalker.currentNode;
+            let tmpString = node.textContent
+            let word=lines[i];
+            word=word.replace(/\r?\n|\r/g,word);
+            tmpString = tmpString.replace(word, '<span style="color:red !important" class="winnie">'+word+'</span>');
+            if(tmpString!=node.textContent){
+              console.log(tmpString);
+              node.parentNode.insertAdjacentHTML("afterbegin",tmpString);
+              node.textContent='';
+            }
+          }
+      }
     }
 }
+txtFile.send();
 
 
 
@@ -35,4 +47,23 @@ for (let i = 0; i < all_img.length; i++) {
     all_img[i].src = shepopo[random_number];
     // last_one = i;
 }
+*/
+
+
+/*
+// walk every text tag
+          const node = treeWalker.currentNode;
+          let tmpString = document.createElement('span');
+          tmpString = node.textContent;
+          for(let i=0;i<=lines.length-1;i++){
+            let word=lines[i];
+            console.log(word)
+            tmpString = node.textContent.replace(new RegExp(word, "g"), '<span style="color:red !important" class="winnie">'+word+'</span>');
+            if(tmpString!=node.textContent){
+              console.log(tmpString);
+              node.parentNode.insertAdjacentHTML("afterbegin",tmpString);
+              node.textContent='';
+            }
+          }
+        }
 */
