@@ -23,6 +23,7 @@ txtFile.onreadystatechange=()=>{
             tmpString = tmpString.replace(new RegExp('Report of the WHO-China Joint Mission on Coronavirus Disease 2019','gi'), '<span style="color:red !important" class="winnie">'+'辣個中國好棒棒報告'+'</span>');
             tmpString = tmpString.replace(new RegExp('WHO','g'), '<span style="color:red !important" class="winnie">'+'中華民國淪陷區衛生組織'+'</span>');
             tmpString = tmpString.replace(new RegExp('印度變種病毒','gi'), '<span style="color:red !important" class="winnie">'+'看起來是印度來的但是實際上還是中共武漢肺炎'+'</span>');
+            tmpString = tmpString.replace(new RegExp('世界衛生組織','gi'), '<span style="color:red !important" class="winnie">'+'中華民國淪陷區衛生組織'+'</span>');
             if(tmpString!=node.textContent&&tmpString!='<span style="color:red !important" class="winnie"></span>'){
               count++;
               console.log(tmpString)
