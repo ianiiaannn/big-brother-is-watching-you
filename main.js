@@ -44,7 +44,11 @@ txtFile.onreadystatechange=()=>{
         "https://www.rfa.org/cantonese/commentaries/lj/com-03102020073957.html/com0310-web.jpg/@@images/image",
         "https://v515.files.wordpress.com/2019/08/901994e0-35d6-46e3-b651-e170cf766e46.jpg",
         "https://spaceur.com/i/dR3b8x2.jpg",
-        "https://cdn.discuss.com.hk/t/db5d1f/f/320x0/https://img.discuss.com.hk/d/attachments/day_200207/20200207_29ed991d5df53156d3d2MH6torx65aUM.jpg"
+        "https://cdn.discuss.com.hk/t/db5d1f/f/320x0/https://img.discuss.com.hk/d/attachments/day_200207/20200207_29ed991d5df53156d3d2MH6torx65aUM.jpg",
+        "https://pbs.twimg.com/media/Dn_GhMUU8AEjokw.jpg",
+        "https://images.uncyc.org/zh-tw/e/ea/%E7%BF%92%E8%BF%91%E5%B9%B3.JPG",
+        "https://s.yimg.com/ny/api/res/1.2/PWHHHp6k_Kg3AT1Q8hcTwg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTg3Mi4xNTY4NjI3NDUwOTg-/https://s.yimg.com/uu/api/res/1.2/MSgRV.axvLMc_BnmKYqH3w--~B/aD02OTU7dz01MTA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/zh-tw/setn.com.tw/bd533699b835fcd281fcb3fafd2b9515",
+
       ];
       const all_img = document.getElementsByTagName("img");
       // let last_one;
