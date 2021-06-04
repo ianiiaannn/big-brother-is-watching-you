@@ -1,7 +1,7 @@
 {
     "name":"支語大警察",
     "description":"對 你懂的",
-    "version":"0.1",
+    "version":"6.4",
     "manifest_version":2,
     "content_scripts":[
         {
