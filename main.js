@@ -37,7 +37,7 @@ txtFile.onreadystatechange=()=>{
     }
     console.log(count);
     console.log(nodeCount)
-    if(nodeCount/10>count){
+    if(nodeCount/10<count){
       let shepopo = [
         "https://image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fcw1.tw%2FCW%2Fcrossing%2Fimages%2Farticle%2F201802%2Farticle-5a9368e289128.jpg/?w=828&format=webp",
         "https://imgcdn.cna.com.tw/www/webphotos/WebOg/600/20200128/598x314_858749950586.jpg",
