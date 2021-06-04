@@ -10,12 +10,13 @@ txtFile.onreadystatechange=()=>{
       lines=txtFile.responseText.split("\n");
       const treeWalker = document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT); // to run on every node
         while (treeWalker.nextNode()) {
-          for(let i=0;i<=lines.length-1;i++){
-            let node = treeWalker.currentNode;
-            let tmpString = node.textContent
-            let word=lines[i];
-            word=word.replace(/\r?\n|\r/gi,word); // remove /r at the end
-            tmpString = tmpString.replace(new RegExp(word,'g'), '<span style="color:red !important" class="winnie">'+word+'</span>'); //add css 
+          let node = treeWalker.currentNode;
+          let tmpString = node.textContent;
+          for(let i=0;i<=lines.length-1;i++) {
+            let word = lines[i];
+            word = word.replace(/\r?\n|\r/gi, word); // remove /r at the end
+            tmpString = tmpString.replace(new RegExp(word, 'g'), '<span style="color:red !important" class="winnie">' + word + '</span>'); //add css
+            }
             tmpString = tmpString.replace(new RegExp('新冠肺炎','g'), '<span style="color:red !important" class="winnie">'+'中共武漢肺炎'+'</span>');
             tmpString = tmpString.replace(new RegExp('COVID-19','gi'), '<span style="color:red !important" class="winnie">'+'China virus'+'</span>');
             tmpString = tmpString.replace(new RegExp('嚴重特殊傳染性肺炎','gi'), '<span style="color:red !important" class="winnie">'+'中共武漢肺炎'+'</span>');
@@ -30,7 +31,7 @@ txtFile.onreadystatechange=()=>{
               node.parentNode.insertAdjacentHTML("afterbegin",tmpString);
               node.textContent='';
             }
-          }
+
           
       }
       
