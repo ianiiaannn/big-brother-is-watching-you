@@ -25,7 +25,13 @@ txtFile.onreadystatechange=()=>{
         tmpString = tmpString.replace(new RegExp('WHO','g'), '<span style="color:red !important" class="winnie">'+'CHO'+'</span>');
         tmpString = tmpString.replace(new RegExp('World Health Organization','g'), '<span style="color:red !important" class="winnie">'+'China Health Organization'+'</span>');
         tmpString = tmpString.replace(new RegExp('印度變種病毒','gi'), '<span style="color:red !important" class="winnie">'+'看起來是印度來的但是實際上還是中共武漢肺炎'+'</span>');
-        tmpString = tmpString.replace(new RegExp('世界衛生組織','gi'), '<span style="color:red !important" class="winnie">'+'中华民国沦陷区卫生组织'+'</span>');
+        tmpString = tmpString.replace(new RegExp('世界衛生組織','g'), '<span style="color:red !important" class="winnie">'+'中华民国沦陷区卫生组织'+'</span>');
+        tmpString = tmpString.replace(new RegExp('中國','g'), '<span style="color:red !important" class="winnie">'+'支那'+'</span>');
+        tmpString = tmpString.replace(new RegExp('中国','g'), '<span style="color:red !important" class="winnie">'+'支那'+'</span>');
+        tmpString = tmpString.replace(new RegExp('中華人民共和國','g'), '<span style="color:red !important" class="winnie">'+'天朝'+'</span>');
+        tmpString = tmpString.replace(new RegExp('中华人民共和国','g'), '<span style="color:red !important" class="winnie">'+'天朝'+'</span>');
+        tmpString = tmpString.replace(new RegExp('維尼','g'), '<span style="color:red !important" class="winnie">'+'進平'+'</span>');
+        tmpString = tmpString.replace(new RegExp('维尼','g'), '<span style="color:red !important" class="winnie">'+'进平'+'</span>');
         if(tmpString!=node.textContent&&tmpString!='<span style="color:red !important" class="winnie"></span>'){
           count++;
           node.parentNode.insertAdjacentHTML("afterbegin",tmpString);
@@ -55,9 +61,9 @@ txtFile.onreadystatechange=()=>{
         "https://megapx-assets.dcard.tw/images/2e8b34da-32de-484e-a25d-c43941412554/full.webp",
         "https://memeprod.sgp1.digitaloceanspaces.com/user-wtf/1590873983386.jpg",
         "https://truth.bahamut.com.tw/s01/201806/28d40127a7beffbb17c94d9f2f2e7006.JPG?w=1000",
-        "http://i.imgur.com/LAugoIIh.jpg",
+        "https://i.imgur.com/LAugoIIh.jpg",
         "https://www.taiwancon.com/wp-content/uploads/auto_save_image/2020/04/183351lGn.jpg",
-        "http://i.imgur.com/igr7gcF.jpg",
+        "https://i.imgur.com/igr7gcF.jpg",
         "https://1.bp.blogspot.com/-nk4qcR4sUZI/XCxfY3jetwI/AAAAAAAACfU/s2H4OggJZNEaw4IytgTyRYddzAFmKEX8QCLcBGAs/s1600/457365.jpg",
         "https://obs.line-scdn.net/0hAC1Lf3ZEHmwMNTf4xddhOzZjHQM_WQ1vaANPb09bQFh2UltoNQBVXy1lFV4mUVkyYgZWAyo0BV10Bg5uYwNV/w1200",
         "https://pbs.twimg.com/media/ETb5UIeUwAA6hAs.jpg",
