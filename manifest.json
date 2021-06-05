@@ -6,7 +6,7 @@
     "content_scripts":[
         {
             "matches": ["*://*/*"],
-            "exclude_matches":["https://translate.google.com/*","https://translate.google.com.tw/*","http://*.uncyclopedia.tw/*"],
+            "exclude_matches":["https://translate.google.com/*","https://translate.google.com.tw/*"],
             "js": ["main.js"],
             "all_frames":true
         }
