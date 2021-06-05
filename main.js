@@ -22,13 +22,12 @@ txtFile.onreadystatechange=()=>{
         tmpString = tmpString.replace(new RegExp('COVID-19','gi'), '<span style="color:red !important" class="winnie">'+'China virus'+'</span>');
         tmpString = tmpString.replace(new RegExp('嚴重特殊傳染性肺炎','gi'), '<span style="color:red !important" class="winnie">'+'中共武漢肺炎'+'</span>');
         tmpString = tmpString.replace(new RegExp('SARS-CoV-2','gi'), '<span style="color:red !important" class="winnie">'+'China virus'+'</span>');
-        tmpString = tmpString.replace(new RegExp('Report of the WHO-China Joint Mission on Coronavirus Disease 2019','gi'), '<span style="color:red !important" class="winnie">'+'辣個中國好棒棒報告'+'</span>');
-        tmpString = tmpString.replace(new RegExp('WHO','g'), '<span style="color:red !important" class="winnie">'+'中華民國淪陷區衛生組織'+'</span>');
+        tmpString = tmpString.replace(new RegExp('WHO','g'), '<span style="color:red !important" class="winnie">'+'CHO'+'</span>');
+        tmpString = tmpString.replace(new RegExp('World Health Organization','g'), '<span style="color:red !important" class="winnie">'+'China Health Organization'+'</span>');
         tmpString = tmpString.replace(new RegExp('印度變種病毒','gi'), '<span style="color:red !important" class="winnie">'+'看起來是印度來的但是實際上還是中共武漢肺炎'+'</span>');
-        tmpString = tmpString.replace(new RegExp('世界衛生組織','gi'), '<span style="color:red !important" class="winnie">'+'中華民國淪陷區衛生組織'+'</span>');
+        tmpString = tmpString.replace(new RegExp('世界衛生組織','gi'), '<span style="color:red !important" class="winnie">'+'中华民国沦陷区卫生组织'+'</span>');
         if(tmpString!=node.textContent&&tmpString!='<span style="color:red !important" class="winnie"></span>'){
           count++;
-          //console.log(tmpString)
           node.parentNode.insertAdjacentHTML("afterbegin",tmpString);
           node.textContent='';
         }
@@ -54,7 +53,7 @@ txtFile.onreadystatechange=()=>{
         "https://1.bp.blogspot.com/-zoYzu8sMGRk/XSyRlEh0oaI/AAAAAAAAB5k/0kZelQToc3o8yQpRyY9iXbYN5p7acsY5QCLcBGAs/s1600/20190715.JPG",
         "https://scontent-tpe1-1.xx.fbcdn.net/v/t1.6435-9/103763837_161904495337832_8577781060121451835_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=sJ0mTqPxcOMAX9dowdH&_nc_ht=scontent-tpe1-1.xx&oh=7556ffc5296c236d5a2fe0d9ade5cf45&oe=60E11EF6",
         "https://megapx-assets.dcard.tw/images/2e8b34da-32de-484e-a25d-c43941412554/full.webp",
-        "https://www.google.com/url?sa=i&url=https%3A%2F%2Fmemes.tw%2Fwtf%3Fcontest%3D327&psig=AOvVaw38doGvEGFMf0rLgNV3eQnj&ust=1622999121868000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMitz4P9gPECFQAAAAAdAAAAABAU",
+        "https://memeprod.sgp1.digitaloceanspaces.com/user-wtf/1590873983386.jpg",
         "https://truth.bahamut.com.tw/s01/201806/28d40127a7beffbb17c94d9f2f2e7006.JPG?w=1000",
         "http://i.imgur.com/LAugoIIh.jpg",
         "https://www.taiwancon.com/wp-content/uploads/auto_save_image/2020/04/183351lGn.jpg",
