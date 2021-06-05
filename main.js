@@ -51,7 +51,24 @@ txtFile.onreadystatechange=()=>{
         "https://pbs.twimg.com/media/Dn_GhMUU8AEjokw.jpg",
         "https://images.uncyc.org/zh-tw/e/ea/%E7%BF%92%E8%BF%91%E5%B9%B3.JPG",
         "https://s.yimg.com/ny/api/res/1.2/PWHHHp6k_Kg3AT1Q8hcTwg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTg3Mi4xNTY4NjI3NDUwOTg-/https://s.yimg.com/uu/api/res/1.2/MSgRV.axvLMc_BnmKYqH3w--~B/aD02OTU7dz01MTA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/zh-tw/setn.com.tw/bd533699b835fcd281fcb3fafd2b9515",
-
+        "https://1.bp.blogspot.com/-zoYzu8sMGRk/XSyRlEh0oaI/AAAAAAAAB5k/0kZelQToc3o8yQpRyY9iXbYN5p7acsY5QCLcBGAs/s1600/20190715.JPG",
+        "https://scontent-tpe1-1.xx.fbcdn.net/v/t1.6435-9/103763837_161904495337832_8577781060121451835_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=sJ0mTqPxcOMAX9dowdH&_nc_ht=scontent-tpe1-1.xx&oh=7556ffc5296c236d5a2fe0d9ade5cf45&oe=60E11EF6",
+        "https://megapx-assets.dcard.tw/images/2e8b34da-32de-484e-a25d-c43941412554/full.webp",
+        "https://www.google.com/url?sa=i&url=https%3A%2F%2Fmemes.tw%2Fwtf%3Fcontest%3D327&psig=AOvVaw38doGvEGFMf0rLgNV3eQnj&ust=1622999121868000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMitz4P9gPECFQAAAAAdAAAAABAU",
+        "https://truth.bahamut.com.tw/s01/201806/28d40127a7beffbb17c94d9f2f2e7006.JPG?w=1000",
+        "http://i.imgur.com/LAugoIIh.jpg",
+        "https://www.taiwancon.com/wp-content/uploads/auto_save_image/2020/04/183351lGn.jpg",
+        "http://i.imgur.com/igr7gcF.jpg",
+        "https://1.bp.blogspot.com/-nk4qcR4sUZI/XCxfY3jetwI/AAAAAAAACfU/s2H4OggJZNEaw4IytgTyRYddzAFmKEX8QCLcBGAs/s1600/457365.jpg",
+        "https://obs.line-scdn.net/0hAC1Lf3ZEHmwMNTf4xddhOzZjHQM_WQ1vaANPb09bQFh2UltoNQBVXy1lFV4mUVkyYgZWAyo0BV10Bg5uYwNV/w1200",
+        "https://pbs.twimg.com/media/ETb5UIeUwAA6hAs.jpg",
+        "https://pbs.twimg.com/media/EPtGTCDUwAEvOHR.jpg",
+        "https://i0.wp.com/www.scooptw.com/wp-content/uploads/01292020AA.jpg?fit=696%2C464&ssl=1",
+        "https://memeprod.sgp1.digitaloceanspaces.com/user-wtf/1586436657442.jpg",
+        "https://i.imgur.com/UMQhDuil.jpg",
+        "https://i.imgur.com/qsTfgb3l.jpg",
+        "https://i.imgur.com/GMka4ngl.jpg",
+        "https://i.imgur.com/sOK6MER.jpg"
       ];
       const all_img = document.getElementsByTagName("img");
       // let last_one;
